@@ -1,2 +1,0 @@
-web o anime naruto
-
