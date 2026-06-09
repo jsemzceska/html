@@ -1,0 +1,110 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d9eaff, #f7faff);
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animace načtení stránky */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hlavička */
+header {
+    background: #0077cc;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Navigace */
+nav {
+    background: #005fa3;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: white;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hlavní obsah */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    animation: popIn 0.7s ease-out;
+}
+
+ popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    border-left: 6px solid #0077cc;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+section h2:hover {
+    color: #0077cc;
+    transform: translateX(5px);
+}
+
+/* Seznamy */
+ul li, ol li {
+    margin: 6px 0;
+    transition: 0.2s;
+}
+
+ul li:hover, ol li:hover {
+    transform: translateX(6px);
+    color: #0077cc;
+}
+
